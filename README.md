@@ -14,223 +14,77 @@ __{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express
 ## Quick Start
 
 Configure {swagger-express} as express middleware.
-
-
-`apiVersion`      -> Your api version.
-
-`swaggerVersion`  -> Swagger version.
-
-`swaggerUI`       -> Where is your swagger-ui?
-
-`swaggerURL`      -> Path to use for swagger ui web interface.
-
-`swaggerJSON`     -> Path to use for swagger ui JSON.
-
-`basePath`        -> The basePath for swagger.js
-
-`info`            -> [Metadata][info] about the API
-
-`apis`            -> Define your api array.
-
-`middleware`      -> Function before response.
-
 ```
-var swagger = require('swagger-express');
+var swagger = require('tbe-swagger2-express');
 
-app.configure(function(){
-  ...
-  app.use(swagger.init(app, {
-    apiVersion: '1.0',
-    swaggerVersion: '1.0',
-    swaggerURL: '/swagger',
-    swaggerJSON: '/api-docs.json',
-    swaggerUI: './public/swagger/',
-    basePath: 'http://localhost:3000',
+app.use(swagger.init(app, {
+    swaggerVersion: '2.0',
+    host: baseUrl, 'localhost:3000',
+    basePath: '/',
+    swaggerURL: '/docs',
+    swaggerJSON: '/api-docs',
+    swaggerUI: './public/swagger',
+    schemes: ['http', 'https'],
     info: {
-      title: 'swagger-express sample app',
-      description: 'Swagger + Express = {swagger-express}'
+        version: '1.0.0',
+        title: 'tbe-swagger2-express example,
+        description: 'This is an example of the upgraded swagger-express library'
     },
-    apis: ['./api.js', './api.yml'],
-    middleware: function(req, res){}
-  }));
-  app.use(app.router);
-  ...
-});
+    tags: [
+        {
+            name: "First",
+            description: "Endpoint category - leave empty for default"
+        },
+        {
+            name: "Second",
+            description: "Endpoint category - leave empty for default"
+        }
+    ],
+    securityDefinitions: {
+        "api_key": {
+            "type": "apiKey",
+            "name": "api_key",
+            "in": "header"
+        }
+    },
+    paths: ['./api/paths1.yml', './api/paths2.yml', './api/api.js']
+}));
 ```
+## JS and YAML
+Use standard swagger 2.0 specs.
 
-[info]: https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md#513-info-object
+Each path.yml file should have "paths" as its root
 
-## Read from jsdoc
-
-Example 'api.js'
-
-```js
-
-/**
- * @swagger
- * resourcePath: /api
- * description: All about API
- */
-
-/**
- * @swagger
- * path: /login
- * operations:
- *   -  httpMethod: POST
- *      summary: Login with username and password
- *      notes: Returns a user based on username
- *      responseClass: User
- *      nickname: login
- *      consumes: 
- *        - text/html
- *      parameters:
- *        - name: username
- *          description: Your username
- *          paramType: query
- *          required: true
- *          dataType: string
- *        - name: password
- *          description: Your password
- *          paramType: query
- *          required: true
- *          dataType: string
- */
-exports.login = function (req, res) {
-  var user = {};
-  user.username = req.param('username');
-  user.password = req.param('password');
-  res.json(user);
-}
-
-/**
- * @swagger
- * models:
- *   User:
- *     id: User
- *     properties:
- *       username:
- *         type: String
- *       password:
- *         type: String    
- */
-```
-
-## Read from yaml file
-
-Example 'api.yml'
-
-```yml
-resourcePath: /api
-description: All about API
-apis: 
-
-- path: /login
-  operations:
-
-  - httpMethod: POST
-    summary: Login with username and password
-    notes: Returns a user based on username
-    responseClass: User
-    nickname: login
-    consumes: 
-      - text/html
-    parameters:
-
-    - name: username
-      dataType: string
-      paramType: query
-      required: true
-      description: Your username
-
-    - name: password
-      dataType: string
-      paramType: query
-      required: true
-      description: Your password
-
-models:
-    User:
-      id: User
-      properties:
-        username:
-          type: String
-        password:
-          type: String    
-```
-
-## Read from jsdoc
-
-Example 'api.coffee'
-
-```coffee
-
-###
- * @swagger
- * resourcePath: /api
- * description: All about API
-###
-
-###
- * @swagger
- * path: /login
- * operations:
- *   -  httpMethod: POST
- *      summary: Login with username and password
- *      notes: Returns a user based on username
- *      responseClass: User
- *      nickname: login
- *      consumes:
- *        - text/html
- *      parameters:
- *        - name: username
- *          description: Your username
- *          paramType: query
- *          required: true
- *          dataType: string
- *        - name: password
- *          description: Your password
- *          paramType: query
- *          required: true
- *          dataType: string
-###
-
-###
- * @swagger
- * models:
- *   User:
- *     id: User
- *     properties:
- *       username:
- *         type: String
- *       password:
- *         type: String
-###
-```
+paths:
+    /examplepath1:
+        get:
+            tags:
+                - First
+            ...
+    /examplepath2:
+        get:
+            tags:
+                - First
+            ...
+        post:
+            tags:
+                - Second
+            ...
 
 
-## Examples
+For additional information please reference the original swagger-express implementation:
+https://github.com/fliptoo/swagger-express
 
-Clone the {swagger-express} repo, then install the dev dependencies:
+## Credit
 
-    $ git clone git://github.com/fliptoo/swagger-express.git --depth 1
-    $ cd swagger-express
-    $ npm install
-
-and run the example:
-
-    $ cd example
-    $ node app.js
-    
-# Credits
-
-- [Express](https://github.com/visionmedia/express)
-- [swagger-jack](https://github.com/feugy/swagger-jack)
+Based on [Swagger-Express](https://github.com/fliptoo/swagger-express)
+Original Author [Fliptoo &lt;fliptoo.studio@gmail.com&gt;](fliptoo.studio@gmail.com)
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2013 Fliptoo &lt;fliptoo.studio@gmail.com&gt;
+Copyright (c) 2015 theBoEffect &lt;bo.motlagh@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
