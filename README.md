@@ -5,11 +5,11 @@
 implementation for describing, producing, consuming, and visualizing RESTful web services.
 View [demo](http://petstore.swagger.wordnik.com/).
 
-__{swagger-express}__ is a simple and clean solution to integrate swagger with express.
+__{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express} implementation upgrading it to swagger 2.0
 
 ## Installation
 
-    $ npm install -g swagger-express
+    $ npm install -g tb2-swagger2-express
 
 ## Quick Start
 
