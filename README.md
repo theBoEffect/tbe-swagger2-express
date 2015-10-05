@@ -72,7 +72,7 @@ paths:
             tags:
                 - Second
             ...
-            
+
 ```
 
 For additional information please reference the original swagger-express implementation:
@@ -81,6 +81,7 @@ https://github.com/fliptoo/swagger-express
 ## Credit
 
 Based on [Swagger-Express](https://github.com/fliptoo/swagger-express)
+
 Original Author [Fliptoo &lt;fliptoo.studio@gmail.com&gt;](fliptoo.studio@gmail.com)
 
 ## License
