@@ -14,6 +14,7 @@ __{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express
 ## Quick Start
 
 Configure {swagger-express} as express middleware.
+
 ```
 var swagger = require('tbe-swagger2-express');
 
@@ -55,6 +56,7 @@ Use standard swagger 2.0 specs.
 
 Each path.yml file should have "paths" as its root
 
+```
 paths:
     /examplepath1:
         get:
@@ -70,7 +72,8 @@ paths:
             tags:
                 - Second
             ...
-
+            
+```
 
 For additional information please reference the original swagger-express implementation:
 https://github.com/fliptoo/swagger-express
