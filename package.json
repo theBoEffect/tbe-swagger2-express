@@ -1,5 +1,5 @@
 {
-  "name": "tb2-swagger2-express",
+  "name": "tbe-swagger2-express",
   "description": "Document your express rest api by jsDoc or yaml in swagger 2.0",
   "version": "1.0.0",
   "author": "Bo Motlagh <bo.motlagh@gmail.com>",
