@@ -78,6 +78,8 @@ paths:
 For additional information please reference the original swagger-express implementation:
 https://github.com/fliptoo/swagger-express
 
+NOTE: Coffee support removed for this version
+
 ## Credit
 
 Based on [Swagger-Express](https://github.com/fliptoo/swagger-express)
