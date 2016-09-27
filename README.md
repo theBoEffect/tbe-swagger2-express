@@ -1,11 +1,11 @@
-{tbe-swagger2-express}
+# tbe-swagger2-express
 =========
 
-[Swagger](https://developers.helloreverb.com/swagger/) is a specification and complete framework 
+[Swagger](https://swagger.io) is a specification and complete framework
 implementation for describing, producing, consuming, and visualizing RESTful web services.
-View [demo](http://petstore.swagger.wordnik.com/).
+View [demo](http://petstore.swagger.io/).
 
-__{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express} implementation upgrading it to swagger 2.0
+__{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express} by Fliptoo <fliptoo.studio@gmail.com> implementation upgrading it to swagger 2.0
 
 ## Installation
 
@@ -13,7 +13,7 @@ __{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express
 
 ## Quick Start
 
-Configure {swagger-express} as express middleware.
+Configure {tbe-swagger2-express} as express middleware.
 
 ```
 var swagger = require('tbe-swagger2-express');

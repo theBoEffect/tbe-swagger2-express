@@ -2,7 +2,7 @@
   "name": "tbe-swagger2-express",
   "description": "Document your express rest api by jsDoc or yaml in swagger 2.0",
   "version": "1.0.1",
-  "author": "theBoEffect LLC <borzou@theboeffect.com, bfliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
+  "author": "theBoEffect LLC <borzou@theboeffect.com, fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
   "main": "./index",
   "dependencies": {
     "express": "3.5.1",
