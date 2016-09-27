@@ -4,3 +4,4 @@ example/
 .git*
 project.sublime-project
 project.sublime-workspace
+.idea/
