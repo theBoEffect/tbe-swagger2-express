@@ -88,7 +88,7 @@ Original Author [Fliptoo &lt;fliptoo.studio@gmail.com&gt;](fliptoo.studio@gmail.
 
 (The MIT License)
 
-Copyright (c) 2015 theBoEffect &lt;bo.motlagh@gmail.com&gt;
+Copyright (c) 2015 theBoEffect &lt;borzou@theboeffect.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
