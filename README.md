@@ -1,4 +1,4 @@
-{swagger-express}
+{tbe-swagger2-express}
 =========
 
 [Swagger](https://developers.helloreverb.com/swagger/) is a specification and complete framework 

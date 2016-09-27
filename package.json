@@ -1,9 +1,8 @@
 {
   "name": "tbe-swagger2-express",
   "description": "Document your express rest api by jsDoc or yaml in swagger 2.0",
-  "version": "1.0.0",
-  "author": "theBoEffect <bo.motlagh@gmail.com>",
-  "originalAuthor": "fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
+  "version": "1.0.1",
+  "author": "theBoEffect LLC <borzou@theboeffect.com, bfliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
   "main": "./index",
   "dependencies": {
     "express": "3.5.1",
@@ -31,5 +30,5 @@
     "coffee-script",
     "restful"
   ],
-  "repository": "git://github.com/fliptoo/swagger-express"
+  "repository": "git://github.com/theBoEffect/tbe-swagger2-express"
 }
