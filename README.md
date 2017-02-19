@@ -48,7 +48,7 @@ app.use(swagger.init(app, {
             "in": "header"
         }
     },
-    paths: ['./api/paths1.yml', './api/paths2.yml', './api/api.js']
+    paths: ['./api/paths1.yml', './api/paths2.yml']
 }));
 ```
 ## JS and YAML
@@ -86,7 +86,7 @@ Based on [Swagger-Express](https://github.com/fliptoo/swagger-express)
 
 Original Author [Fliptoo &lt;fliptoo.studio@gmail.com&gt;](fliptoo.studio@gmail.com)
 
-## License
+## MIT License
 
 (The MIT License)
 
