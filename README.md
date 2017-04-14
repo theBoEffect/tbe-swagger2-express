@@ -9,7 +9,23 @@ __{tbe-swagger2-express}__ is an update to the simple and clean {swagger-express
 
 ## Installation
 
-    $ npm install tb2-swagger2-express
+    $ npm install tbe-swagger2-express
+
+## Access
+
+This package configures the express middleware required to serve up swagger UI and the swagger json spec. When you initialize the middleware as in the example below, you point the "swaggerUI" property to where ever you've hosted it as static content. This can be a bower install of the default swagger UI or your own implementation of the UI.
+ 
+The swagger UI can be found here: [Swagger UI]()
+
+Once configured, the path to your swagger UI from your node server is defined by the path provided in the swaggerURL property of the init definition. The path the the JSON spec is then provided by the swaggerJSON property.
+
+So if you are hosting your service at example.com, and you configured as below, you would find your swagger URL at http://example.com/docs and you fould find your json at both http://example.com/api-docs and http://example.com/docs/api-docs
+
+## Pointing the UI
+
+Whether you did a bower install to use the defaul swagger UI or created your own version, you can point it to the correct JSON spec by adding the path as a url query parameter. For example: http://example.com/docs?url=http://example.com/api-docs
+
+Of course you can simply modify the UI to point there by default if you implement your own version.
 
 ## Quick Start
 
@@ -52,7 +68,9 @@ app.use(swagger.init(app, {
 }));
 ```
 ## JS and YAML
-Use standard swagger 2.0 specs.
+Use standard swagger 2.0 specs. Found [here](http://swagger.io/specification/)
+
+A handy editor can be found here: [Swagger Editor](http://editor.swagger.io)
 
 Each path.yml file should have "paths" as its root
 
