@@ -1,3 +1,10 @@
+# OBSOLETE
+
+Please consider this functionality deprecated.
+You should not use this library. Please refer to the OpenAPI specification for how to load swagger and swaggerUI from your project.
+https://swagger.io/docs/specification/about/
+
+
 # tbe-swagger2-express
 =========
 
